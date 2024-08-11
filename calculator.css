@@ -1,0 +1,33 @@
+#head{
+    text-align: center;
+
+
+}
+.structure{
+    text-align: center;
+    height: 40px;
+    padding: 10px;
+
+}
+.button{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    width:100px;
+    height: 100px;
+    padding: 25px;
+    margin: 5px;
+    border-radius: 15px;
+   cursor:pointer;
+}
+.Operation{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-weight: bold;
+    width:100px;
+    height: 100px;
+    padding: 25px;
+    margin: 5px;
+    border-radius: 15px;
+   cursor:pointer;
+}
+
