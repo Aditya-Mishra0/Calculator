@@ -30,4 +30,26 @@
     border-radius: 15px;
    cursor:pointer;
 }
+#equate{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-weight: bold;
+    width:100px;
+    height: 100px;
+    padding: 25px;
+    margin: 5px;
+    border-radius: 15px;
+   cursor:pointer;
+}
+#Allclear{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-weight: bold;
+    width:100px;
+    height: 100px;
+    padding: 25px;
+    margin: 5px;
+    border-radius: 15px;
+   cursor:pointer;
+}
 
