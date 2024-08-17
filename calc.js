@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const Equals = document.querySelector("#equate")
     const clears = document.querySelector("#Allclear")
 
-let num1 = 0 ;
-let num2 = 0 ;
-let num3 = 0;
+let num1 = "";
+let num2 = "" ;
+
 let currentOperation = null;
 
 function add(num1, num2) {
@@ -42,7 +42,33 @@ button1.forEach(button1 => {
     });
 });
 
+Operation1.forEach(Operation1 => {
+    Operation1.addEventListener('click',() => {
+        if(num1 != "" ){
+            Operation1 = Operation1.textContent;
+            resultDisplay.textContent = Operation1;
+        }
+
+    })
+})
+
+    Equals.addEventListener('click' ,() => {
+        if(num1 !=0 && num2 != 0 ){
+            operate;
+        }
+    })
+
+    clears.addEventListener('click', () => {
+        num1 = "";
+        num2 = "";
+        currentOperation = null;
+        resultDisplay.textContent = '0';
+    });
+
 function operate(Operation1, num1, num2) {
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+    
     switch (Operation1) {
         case "add":
             return add(num1, num2);
@@ -56,6 +82,7 @@ function operate(Operation1, num1, num2) {
             return "Error: Unknown operation";
     }
 }
+
 
 
 
