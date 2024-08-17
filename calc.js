@@ -30,6 +30,7 @@ function divide(num1, num2) {
     return num1 / num2;
 }
 
+
 button1.forEach(button1 => {
     button1.addEventListener('click', () => {
         if (currentOperation === null) {
