@@ -6,9 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const Equals = document.querySelector("#equate")
     const clears = document.querySelector("#Allclear")
 
-let num1 = "";
+let num1 = "" ;
 let num2 = "" ;
-
 let currentOperation = null;
 
 function add(num1, num2) {
@@ -45,17 +44,21 @@ button1.forEach(button1 => {
 
 Operation1.forEach(Operation1 => {
     Operation1.addEventListener('click',() => {
-        if(num1 != "" ){
-            Operation1 = Operation1.textContent;
-            resultDisplay.textContent = Operation1;
+        if(num1 !== "" ){
+            currentOperation = Operation1.textContent ;
+            resultDisplay.textContent = currentOperation;
         }
 
     })
 })
 
     Equals.addEventListener('click' ,() => {
-        if(num1 !=0 && num2 != 0 ){
-            operate;
+        if(num1 !="" && num2 != "" ){
+            const result = operate();
+            resultDisplay.textContent = result;
+            num1 = result.toString();
+            num2 = "";
+            currentOperation = null ;
         }
     })
 
@@ -66,24 +69,29 @@ Operation1.forEach(Operation1 => {
         resultDisplay.textContent = '0';
     });
 
-function operate(Operation1, num1, num2) {
+function operate() {
     num1 = parseFloat(num1);
     num2 = parseFloat(num2);
     
-    switch (Operation1) {
-        case "add":
+    switch (currentOperation) {
+        case "+":
             return add(num1, num2);
-        case "subtract":
+        case "−":
             return subtract(num1, num2);
-        case "multiply":
+        case "×":
             return multiply(num1, num2);
-        case "divide":
+        case "÷":
             return divide(num1, num2);
         default:
             return "Error: Unknown operation";
     }
 }
 
+console.log(button1);
+console.log(Operation1);
+console.log(resultDisplay);
+console.log(Equals);
+console.log(clears);
 
 
 
