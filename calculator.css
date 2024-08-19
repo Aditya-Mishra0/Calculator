@@ -3,16 +3,26 @@
 
 
 }
+
 #Result{
+    display: flex;
+    justify-content: right;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: x-large;
+    font-size: xx-large;
+    color: white;
+    height: 40px;
+    border: 2px;
+    padding: 10px;
+    background-color: black;
+    margin: 20px auto;
+    width: 415px;
+    box-shadow: 2px 2px 10px black;
 }
 .structure{
     text-align: center;
     height: 40px;
-    padding: 10px;
+    padding: 5px;
 
 }
 .button{
@@ -35,6 +45,8 @@
     margin: 5px;
     border-radius: 15px;
    cursor:pointer;
+   background-color: black;
+   color: white;
 }
 #equate{
     font-family: 'Times New Roman', Times, serif;
@@ -46,6 +58,7 @@
     margin: 5px;
     border-radius: 15px;
    cursor:pointer;
+   background-color: orange;
 }
 #Allclear{
     font-family: 'Times New Roman', Times, serif;
@@ -57,5 +70,6 @@
     margin: 5px;
     border-radius: 15px;
    cursor:pointer;
+   background-color: orange;
 }
 
