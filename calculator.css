@@ -1,28 +1,36 @@
 #head{
+    color: rgb(255, 149, 0);
+    font-family: cursive    ;
+    justify-content: center;
+    display: flex;
     text-align: center;
+    height: 45px;
+    width: 1000px;
+    margin: 20px auto;
+box-shadow: 2px 2px 10px rgb(255, 149, 0);
 
 
 }
-
+.body{
+    background-color: beige;
+}
 #Result{
     display: flex;
     justify-content: right;
-    text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: xx-large;
     color: white;
     height: 40px;
     border: 2px;
-    padding: 10px;
+    padding: 8px;
     background-color: black;
     margin: 20px auto;
-    width: 415px;
+    width: 420px;
     box-shadow: 2px 2px 10px black;
 }
 .structure{
     text-align: center;
-    height: 40px;
-    padding: 5px;
+    height: 30px;
 
 }
 .button{
