@@ -45,8 +45,8 @@ button1.forEach(button1 => {
 Operation1.forEach(Operation1 => {
     Operation1.addEventListener('click',() => {
         if(num1 !== "" ){
-            currentOperation = Operation1.textContent ;
-            resultDisplay.textContent = currentOperation;
+            currentOperation =  Operation1.textContent ;
+            resultDisplay.textContent =  currentOperation;
         }
 
     })
@@ -87,11 +87,7 @@ function operate() {
     }
 }
 
-console.log(button1);
-console.log(Operation1);
-console.log(resultDisplay);
-console.log(Equals);
-console.log(clears);
+
 
 
 
