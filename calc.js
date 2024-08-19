@@ -37,16 +37,24 @@ button1.forEach(button1 => {
             resultDisplay.textContent = num1;
         } else {
             num2 += button1.textContent;
-            resultDisplay.textContent = num2;
+            resultDisplay.textContent = (`${num1}${currentOperation}${num2}`);
         }
     });
 });
 
 Operation1.forEach(Operation1 => {
     Operation1.addEventListener('click',() => {
-        if(num1 !== "" ){
+        if(num1 !== "" && num2 == "" ){
             currentOperation =  Operation1.textContent ;
-            resultDisplay.textContent =  currentOperation;
+            resultDisplay.textContent =(`${num1}${currentOperation}`) ;
+        }
+        else if (num1 !== "" && num2 !== 0 ){
+    const result = operate();
+    resultDisplay.textContent = result;
+    num1 = result.toString();
+    num2 = "";
+    currentOperation = Operation1.textContent;
+    resultDisplay.textContent = (`${result}${currentOperation}`);
         }
 
     })
@@ -54,7 +62,7 @@ Operation1.forEach(Operation1 => {
 
     Equals.addEventListener('click' ,() => {
         if(num1 !="" && num2 != "" ){
-            const result = operate();
+           const result = operate();
             resultDisplay.textContent = result;
             num1 = result.toString();
             num2 = "";
