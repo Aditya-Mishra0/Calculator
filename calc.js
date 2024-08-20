@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultDisplay = document.querySelector("#Result")
     const Equals = document.querySelector("#equate")
     const clears = document.querySelector("#Allclear")
+    const sub = document.querySelector("#subtract")
 
 let num1 = "" ;
 let num2 = "" ;
@@ -44,17 +45,22 @@ button1.forEach(button1 => {
 
 Operation1.forEach(Operation1 => {
     Operation1.addEventListener('click',() => {
-        if(num1 !== "" && num2 == "" ){
+        if(num1 !== "" && num2 == "" && num1 !== "-"){
             currentOperation =  Operation1.textContent ;
             resultDisplay.textContent =(`${num1}${currentOperation}`) ;
         }
-        else if (num1 !== "" && num2 !== 0 ){
+        else if (num1 !== "" && num2 !== "" ){
     const result = operate();
     resultDisplay.textContent = result;
     num1 = result.toString();
     num2 = "";
     currentOperation = Operation1.textContent;
     resultDisplay.textContent = (`${result}${currentOperation}`);
+        }
+        else if (num1 === "" && Operation1.textContent === "−"){
+            num1 = "-" ;
+        resultDisplay.textContent = num1;
+            currentOperation = null ;
         }
 
     })
