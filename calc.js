@@ -45,11 +45,15 @@ button1.forEach(button1 => {
 
 Operation1.forEach(Operation1 => {
     Operation1.addEventListener('click',() => {
-        if(num1 !== "" && num2 == "" && num1 !== "-"){
+        if(num1 !== "" && num2 == "" && num1 !== "-" && currentOperation === null){
             currentOperation =  Operation1.textContent ;
             resultDisplay.textContent =(`${num1}${currentOperation}`) ;
         }
-        else if (num1 !== "" && num2 !== "" ){
+else if(num1 !== "" && num2 == "" && currentOperation !== null && Operation1.textContent === "−"){
+    num2 = " -";
+    resultDisplay.textContent = (`${num1}${currentOperation}${num2}`)
+}
+        else if (num1 !== "" && num2 !== "" && num2 !== " -"){
     const result = operate();
     resultDisplay.textContent = result;
     num1 = result.toString();
@@ -57,12 +61,14 @@ Operation1.forEach(Operation1 => {
     currentOperation = Operation1.textContent;
     resultDisplay.textContent = (`${result}${currentOperation}`);
         }
+
         else if (num1 === "" && Operation1.textContent === "−"){
             num1 = "-" ;
         resultDisplay.textContent = num1;
             currentOperation = null ;
         }
 
+        
     })
 })
 
@@ -86,6 +92,9 @@ Operation1.forEach(Operation1 => {
 function operate() {
     num1 = parseFloat(num1);
     num2 = parseFloat(num2);
+    console.log(num1)
+    console.log(num2)
+    
     
     switch (currentOperation) {
         case "+":
